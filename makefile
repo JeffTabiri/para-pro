@@ -1,8 +1,10 @@
-mpi: main.o
-	mpirun -n 4 main.o
 
-main.o: main.c
-	mpicc main.c -o main.o
+# Start application helloWorld with four process.
+mpi helloWorld: helloWorld.o
+	mpirun -n 4 helloWorld.o
+
+helloWorld.o: helloWorld.c
+	mpicc helloWorld.c -o helloWorld.o
 
 clean:
-	rm -f main.o
+	rm -f helloWorld.o
