@@ -45,8 +45,6 @@ int main(void) {
         }
     }
 
-
-
     /*
      *Tells the MPI system that we are done using MPI, and
      * it should free any allocated resources.
